@@ -1,0 +1,62 @@
+//CUSTOM gate
+// File name: projects/02/Mul.hdl
+
+/**
+ * The chip will multiply 2 numbers.
+ * Handling overflows: any number larger than 16 bits can be 
+ * truncated to include only the 16 least significant bits.
+ **/
+
+CHIP Mul{
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    Mux16(a=false, b=a, sel=b[0], out=temp0);
+    ShiftLeft(in=a, out=aleft0);
+    Mux16(a=false, b=aleft0, sel=b[1], out=temp1);
+    ShiftLeft(in=aleft0, out=aleft1);
+    Mux16(a=false, b=aleft1, sel=b[2], out=temp2);
+    ShiftLeft(in=aleft1, out=aleft2);
+    Mux16(a=false, b=aleft2, sel=b[3], out=temp3);
+    ShiftLeft(in=aleft2, out=aleft3);
+    Mux16(a=false, b=aleft3, sel=b[4], out=temp4);
+    ShiftLeft(in=aleft3, out=aleft4);
+    Mux16(a=false, b=aleft4, sel=b[5], out=temp5);
+    ShiftLeft(in=aleft4, out=aleft5);
+    Mux16(a=false, b=aleft5, sel=b[6], out=temp6);
+    ShiftLeft(in=aleft5, out=aleft6);
+    Mux16(a=false, b=aleft6, sel=b[7], out=temp7);
+    ShiftLeft(in=aleft6, out=aleft7);
+    Mux16(a=false, b=aleft7, sel=b[8], out=temp8);
+    ShiftLeft(in=aleft7, out=aleft8);
+    Mux16(a=false, b=aleft8, sel=b[9], out=temp9);
+    ShiftLeft(in=aleft8, out=aleft9);
+    Mux16(a=false, b=aleft9, sel=b[10], out=temp10);
+    ShiftLeft(in=aleft9, out=aleft10);
+    Mux16(a=false, b=aleft10, sel=b[11], out=temp11);
+    ShiftLeft(in=aleft10, out=aleft11);
+    Mux16(a=false, b=aleft11, sel=b[12], out=temp12);
+    ShiftLeft(in=aleft11, out=aleft12);
+    Mux16(a=false, b=aleft12, sel=b[13], out=temp13);
+    ShiftLeft(in=aleft12, out=aleft13);
+    Mux16(a=false, b=aleft13, sel=b[14], out=temp14);
+    ShiftLeft(in=aleft13, out=aleft14);
+    Mux16(a=false, b=aleft14, sel=b[15], out=temp15);
+
+    Add16(a=temp0, b=temp1, out=sum0);
+    Add16(a=sum0, b=temp2, out=sum1);
+    Add16(a=sum1, b=temp3, out=sum2);
+    Add16(a=sum2, b=temp4, out=sum3);
+    Add16(a=sum3, b=temp5, out=sum4);
+    Add16(a=sum4, b=temp6, out=sum5);
+    Add16(a=sum5, b=temp7, out=sum6);
+    Add16(a=sum6, b=temp8, out=sum7);
+    Add16(a=sum7, b=temp9, out=sum8);
+    Add16(a=sum8, b=temp10, out=sum9);
+    Add16(a=sum9, b=temp11, out=sum10);
+    Add16(a=sum10, b=temp12, out=sum11);
+    Add16(a=sum11, b=temp13, out=sum12);
+    Add16(a=sum12, b=temp14, out=sum13);
+    Add16(a=sum13, b=temp15, out=out);
+}

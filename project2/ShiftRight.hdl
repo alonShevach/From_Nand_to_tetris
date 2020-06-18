@@ -1,0 +1,17 @@
+//CUSTOM gate
+// File name: projects/02/ShiftRight.hdl
+
+/**
+ * Shifts the all the bits one step to the right.
+ * out = in when all the bits are shifted to the right.
+ **/
+
+
+CHIP ShiftRight {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+    And16(a=in, b=in, out[15]=out[15], out[1..15]=out[0..14], out[0]=leftover);
+     
+}

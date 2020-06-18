@@ -1,0 +1,27 @@
+alon.shevach, dana_shulman
+===============================================================================
+Alon Shevach, ID 205954209, alon.shevach@mail.huji.ac.il
+Dana Shulman, ID 315703371, dana.shulman@mail.huji.ac.il
+===============================================================================
+
+                      Project 7 - python files
+                      ------------------------
+  
+
+Submitted Files
+---------------
+
+CodeWriter.py - This file holds all the methods for the translation of the vm language to asm language.
+
+Parser.py - the Parser holds a function that gets a file of instructions in vm language, cleans all the spaces and the comments and breaks down each instruction to it's parts
+
+VMtranslator.py - This file runs the entire program. It gets the instructions broken into sections from the parser and uses the CodeWriter to translate the instructions into asm.
+
+VMtranslator - this file runs all the program, and uses all the other files mentioned above.
+
+Makefile - this file runs the program.
+
+README - This file.
+
+Remarks
+-------

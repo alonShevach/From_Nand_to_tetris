@@ -1,0 +1,22 @@
+alon.shevach, dana_shulman
+===============================================================================
+Alon Shevach, ID 205954209, alon.shevach@mail.huji.ac.il
+Dana Shulman, ID 315703371, dana.shulman@mail.huji.ac.il
+===============================================================================
+
+                           Project 10 - Python files
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+
+JackAnalyzer.py - the main program.
+CompilationEngine.py  - a class which compiles each token by the grammar rules.
+JackTokenizer.py - a class which separates the jack file into tokens.
+JackAnalyzer - this file runs all the program, and uses all the other files mentioned above.
+Makefile - this file runs the program.
+README - This file.
+
+Remarks
+-------
